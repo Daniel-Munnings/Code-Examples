@@ -1,9 +1,0 @@
-danielm | password123
-daniels | password321
-jamesm | password456
-sampoornan | password654
-kierans | password789
-markc | password987
-cyprian | password001
-perryt | password100
-adams | password002
