@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    background: #9CBA7F;
+    background-image: url("../images/palm.jpg");
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    div
+    {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+        background: #EDEDED;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+        div table
+        {
+            width: 100%;
+        }
+
+            div table th
+            {
+                font-weight: bold;
+                background: #404040;
+                color: #EDEDED;
+            }
+
+            div table td
+            {
+                padding: 5px;
+            }
+    
+    form
+    {
+        text-align: left;
+    }
+
+        form input, form select
+        {
+            background: #FFFFFF;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form input[type=submit]
+        {
+            background: #9CBA7F;
+            color: #EDEDED;
+            width: auto;
+        }
+
+            form input[type=submit]:hover
+            {
+                color: #404040;
+                font-weight: bold;
+                cursor: pointer;
+            }
