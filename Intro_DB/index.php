@@ -8,15 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-
+    <?php
+        include("includes/header.php");
+    ?>
 <?php
     include("scripts/connectDB.php");
 
-    echo "<div>";
+    echo "<div class=\"flex-container\">";
 
     $sql = "SELECT personID, addressID, firstName, surname, status FROM person";
     $result = mysqli_query($conn, $sql);
-
+    
     echo "<form action=\"index.php\" method=\"get\">";
         echo "<select name=\"Person\">";
         while($row = mysqli_fetch_assoc($result)) {
@@ -27,7 +29,7 @@
         echo "</select>";
         echo "<input type=\"submit\" value=\"Go\" name=\"Search\" />";
     echo "</form>";
-
+    
     if(isset($_GET['Search']))
     {
         $personID = $_GET['Person'];
@@ -35,7 +37,7 @@
                 FROM person, address 
                 WHERE personID = $personID 
                 AND person.addressID = address.addressID";
-
+        echo "<div>";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_assoc($result)) {
             echo "<p>".$row["houseNumName"]."</p>";
@@ -45,6 +47,7 @@
             echo "<p>".$row["townCity"]."</p>";
             echo "<p>".$row["postCode"]."</p>";
         };
+        echo "</div>";
     };
 
     echo "</div>";

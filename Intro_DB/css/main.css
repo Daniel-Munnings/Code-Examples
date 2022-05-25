@@ -14,65 +14,86 @@ html
 body
 {
     background: #9CBA7F;
-    background-image: url("../images/palm.jpg");
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-    div
+header
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    background: #404040;
+}
+
+    header div  h1
     {
-        width: 60%;
-        height: auto;
-        margin: 0 auto;
-        background: #EDEDED;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
+        color: #9CBA7F;
+        padding-top: 20px;
+        padding-left: 20px;
     }
 
-        div table
+    header div  ul
+    {
+        list-style-type: none;
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+
+        header div  ul li
         {
-            width: 100%;
+            display: inline;
+            margin-left: 20px;
         }
 
-            div table th
+            header div  ul li a
             {
-                font-weight: bold;
-                background: #404040;
                 color: #EDEDED;
+                text-decoration: none;
             }
 
-            div table td
-            {
-                padding: 5px;
-            }
-    
-    form
+                header div  ul li a:hover
+                {
+                    color: #9CBA7F;
+                    text-decoration: underline;
+                }
+
+    div.flex-container
     {
-        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
     }
-
-        form input, form select
+    
+        form
         {
-            background: #FFFFFF;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
+            text-align: left;
+            width: 500px;
         }
 
-        form input[type=submit]
-        {
-            background: #9CBA7F;
-            color: #EDEDED;
-            width: auto;
-        }
-
-            form input[type=submit]:hover
+            form input, form select
             {
-                color: #404040;
-                font-weight: bold;
-                cursor: pointer;
+                background: #FFFFFF;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
             }
+
+            form input[type=submit]
+            {
+                background: #9CBA7F;
+                color: #EDEDED;
+                width: auto;
+            }
+
+                form input[type=submit]:hover
+                {
+                    color: #404040;
+                    cursor: pointer;
+                }
+
+        div.flex-container div
+        {
+            padding: 20px;
+        }
