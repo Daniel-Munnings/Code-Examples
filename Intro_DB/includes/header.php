@@ -1,17 +1,21 @@
-    <header>
-        <div>
-            <h1>
-                Hello
-            </h1>
-        </div>
-        <div>
+<header>
+    <div class="headerContent">
         <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about_us.php">About Us</a></li>
-                <li><a href="contact_us.php">Contact Us</a></li>
-                <li><a href="demo.php">Demo</a></li>
-            </ul>
+            <div class="icon">
+                <div class="hide"></div>
+                <a tabindex="1"></a>
+                <div class="menuItems">
+                    <div class="item">
+                        <p><a href="#">Home</a></p>
+                    </div>
+                    <div class="item">
+                        <p>Insert Address</p>
+                    </div>
+                </div>
+            </div>
         </nav>
+        <div class="logo">
+            
         </div>
-    </header>
+    </div>
+</header>

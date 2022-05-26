@@ -13,87 +13,159 @@ html
 
 body
 {
-    background: #9CBA7F;
+    background: #afdedc;
+    color: #FFFFFF;
 }
 
-header
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    height: 80px;
-    background: #404040;
-}
-
-    header div  h1
+    header
     {
-        color: #9CBA7F;
-        padding-top: 20px;
-        padding-left: 20px;
-    }
-
-    header div  ul
-    {
-        list-style-type: none;
-        padding-top: 30px;
-        padding-right: 20px;
-    }
-
-        header div  ul li
-        {
-            display: inline;
-            margin-left: 20px;
-        }
-
-            header div  ul li a
-            {
-                color: #EDEDED;
-                text-decoration: none;
-            }
-
-                header div  ul li a:hover
-                {
-                    color: #9CBA7F;
-                    text-decoration: underline;
-                }
-
-    div.flex-container
-    {
+        height: 80px;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        
+        justify-content: space-around;
+        background: #776871;
     }
-    
-        form
+        div.headerContent
         {
-            text-align: left;
-            width: 500px;
+            width: 970px;
+            height: auto;
+            margin: 0 auto;
         }
 
-            form input, form select
-            {
-                background: #FFFFFF;
-                border: none;
-                padding: 10px;
-                border-radius: 5px;
-            }
+        div.logo
+        {
+            width: 150px;
+            height: 80px;
+            background-image: url("../images/Addressont.png");
+            background-repeat: no-repeat;
+            background-size: 150px;
+        }
+    
+        nav
+        {
+            width: auto;
+        }
 
-            form input[type=submit]
+            div.icon
             {
-                background: #9CBA7F;
-                color: #EDEDED;
-                width: auto;
+                width: 50px;
+                height: 80px;
+                float: right;
+                background-image: url("../images/menu.png");
+                background-repeat: no-repeat;
+                background-size: 50px;
+                background-position: 0px 15px;
+                position: relative;
             }
-
-                form input[type=submit]:hover
+                
+                div.hide
                 {
-                    color: #404040;
-                    cursor: pointer;
+                    width: 50px;
+                    height: 80px;
+                    z-index: -100;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                }
+                
+                @keyframes show
+                {
+                    from {height: 0px;}
+                    to {height: 200px;}
                 }
 
-        div.flex-container div
+                @keyframes hide
+                {
+                    from {height: 200px;}
+                    to {height: 0px;}
+                }
+
+                div.icon a
+                {
+                    display: block;
+                    width: 50px;
+                    height: 80px;
+                    z-index: 50;
+                }
+
+                div.icon div.menuItems
+                {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 80px;
+                    right: 5px;
+                }
+
+                    div.icon:focus-within div.menuItems
+                    {
+                        visibility: visible;
+                        position: absolute;
+                        width: 960px;
+                        animation-name: show;
+                        animation-duration: 1s;
+                        height: 200px;
+                        background: #776871;
+                        top: 80px;
+                        right: 5px;
+                        border-bottom: 5px solid #91a8a4;
+                    }
+
+                    div.icon:focus-within div.hide
+                    {
+                        z-index: 100;
+                    }
+
+    div.mainContent
+    {
+        width: 960px;
+        min-height: 900px;
+        margin: 0 auto;
+        background: #f0f7ee;
+        border-left: 5px solid #91a8a4;
+        border-right: 5px solid #91a8a4;
+        border-bottom: 5px solid #91a8a4;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-top: 50px;
+    }
+
+        section.card
         {
-            padding: 20px;
+            width: 90%;
+            height: 150px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            color: #404040;
         }
+
+            section.card div.profilePic
+            {
+                float: left;
+                width: 150px;
+                height: 150px;
+                background-image: url("../images/profile.jpg");
+                background-repeat: no-repeat;
+                background-size: 150px;
+                background-position: center;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            
+            section.card div.profileText
+            {
+                float: left;
+                width: 570px;
+                padding-left: 30px;
+            }
+            
+                section.card div.profileText p
+                {
+                    line-height: 25px;
+                }
+
+            section.card div.profileLinks
+            {
+                width: 50px;
+                height: 150px;
+                float: left;
+                line-height: 100px;
+            }
